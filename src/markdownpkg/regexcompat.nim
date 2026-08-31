@@ -3,8 +3,7 @@
 ## The default build uses Nim's `std/re` API. Enabling the package's `regex`
 ## feature switches to nim-regex, which avoids the system PCRE1 dependency.
 
-when defined(feature.markdown.regex) or
-    defined(`feature.nim-markdown.regex`):
+when defined(features.markdown.regex):
   import std/strutils
   import pkg/regex as nimRegex
 
